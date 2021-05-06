@@ -8,16 +8,21 @@ import {UserComponent} from './user.component';
       RouterModule.forChild([
         {
           path: '',
+          redirectTo: 'user/login',
+          pathMatch: 'full'
+        },
+        {
+          path: 'user',
           component: UserComponent,
           children: [
-            {
-              path: 'login',
-              component: UserLoginComponent
-            },
             {
               path: '**',
               redirectTo: '/user/login',
               pathMatch: 'full'
+            },
+            {
+              path: 'login',
+              component: UserLoginComponent
             }
           ]
         }

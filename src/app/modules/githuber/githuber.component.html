@@ -1,2 +1,22 @@
-<p>githuber works!</p>
-<router-outlet></router-outlet>
+<div class="githuber">
+  <div class="githuber__header">
+    <nav class="menu" aria-label="githuber-nav">
+      <ul class="menu__layout menu__layout--start">
+        <li class="menu__item">
+          <a [routerLink]="['/githuber/projects']" class="menu__link">
+            Проекты
+          </a>
+        </li>
+        <li class="menu__item">
+          <a [routerLink]="['/githuber/favorites']" class="menu__link">
+            Избранное
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
+
+

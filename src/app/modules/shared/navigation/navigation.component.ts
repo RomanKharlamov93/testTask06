@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../../user/controls/services/user.service';
 
 @Component({
   selector: 'app-navigation',
@@ -7,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private userService: UserService
+  ) { }
 
   ngOnInit() {
   }
 
-  public kavo() {
-    alert('KAVO NAHOY KAKOY LAGAUT DODIK TI 4E');
+  public userLogout() {
+    this.userService.logout();
   }
+
 }

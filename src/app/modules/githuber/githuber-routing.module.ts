@@ -10,20 +10,21 @@ const routes: Routes = [
     component: GithuberComponent,
     children: [
       {
-        path: '',
+        path: '**',
         redirectTo: '/githuber/projects',
         pathMatch: 'full'
       },
       {
-        path: 'favorites',
-        component: PageFavoritesComponent
+        path: 'projects',
+        component: PageProjectsComponent,
       },
       {
-        path: 'projects',
-        component: PageProjectsComponent
+        path: 'favorites',
+        component: PageFavoritesComponent,
       }
     ]
-  }
+  },
+  {path: '', redirectTo: '/githuber/projects', pathMatch: 'full'}
 ];
 
 @NgModule({
