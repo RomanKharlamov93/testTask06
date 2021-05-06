@@ -1,0 +1,20 @@
+<p>navigation works!</p>
+<nav class="menu" aria-label="Main-Page">
+  <ul class="menu__layout">
+    <li class="menu__item">
+      <a [routerLink]="['/githuber']" class="menu__link">
+        githuber
+      </a>
+    </li>
+    <li class="menu__item">
+      <a [routerLink]="['/login']" class="menu__link">
+        login
+      </a>
+    </li>
+    <li class="menu__item">
+      <a [routerLink]="['/logout']" class="menu__link" (click)="kavo()">
+        logout
+      </a>
+    </li>
+  </ul>
+</nav>
